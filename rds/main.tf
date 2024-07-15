@@ -13,11 +13,11 @@ terraform {
 
 provider "github" {
   token = var.github_token
-  owner = "Food-fusion-Fiap" # Nome da organização
+  owner = "Food-fusion-Fiap"
 }
 
 resource "github_actions_organization_secret" "db_host_secret" {
-  secret_name     = "POSTGRES_HOST_CUSTOMER"
+  secret_name     = "POSTGRES_HOST_ORDER"
   plaintext_value = replace(aws_db_instance.default.endpoint, ":5432", "")
   visibility      = "all"
 }
