@@ -5,15 +5,10 @@ provider "aws" {
 
 terraform {
   backend "s3" {
-    bucket = "terraform-food-fusion"
+    bucket = "terraform-food-fusion-order"
     key    = "prod/terraform-postgres.tfstate"
     region = "us-east-1"
   }
-}
-
-provider "github" {
-  token = var.github_token
-  owner = "Food-fusion-Fiap"
 }
 
 resource "github_actions_organization_secret" "db_host_secret" {

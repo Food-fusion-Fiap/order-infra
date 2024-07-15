@@ -5,7 +5,7 @@ provider "aws" {
 
 terraform {
   backend "s3" {
-    bucket = "terraform-state-order-academy"
+    bucket = "terraform-food-fusion-order"
     key    = "prod/terraform-eks.tfstate"
     region = "us-east-1"  
   }

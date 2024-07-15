@@ -30,20 +30,20 @@ variable "project_name" {
 
 variable "vpc" {
   description = "VPC"
-  default     = "vpc-08d4dd1f33b0b24dc"
+  default     = "vpc-0babee445384b5d52"
 }
 
 variable "subnetA" {
   description = "Subnet A"
-  default     = "subnet-0131eb5733d8ea9dc"
+  default     = "subnet-051508d09587a68ee"
 }
 
 variable "subnetB" {
   description = "Subnet B"
-  default     = "subnet-0512d3c779b944470"
+  default     = "subnet-091b65833688d444c"
 }
 
 variable "subnetC" {
   description = "Subnet C"
-  default     = "subnet-0f4621d2b83113cdf"
+  default     = "subnet-0d46b72a3db090336"
 }
