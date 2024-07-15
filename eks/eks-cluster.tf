@@ -1,9 +1,9 @@
 resource "aws_eks_cluster" "eks-cluster" {
   name     = var.projectName
-  role_arn = "arn:aws:iam::690514169119:role/LabRole"
+  role_arn = var.lab_role_arn
 
   vpc_config {
-    subnet_ids         = [local.aws_public_subnet_id, local.aws_public_subnet2_id]
+    subnet_ids         = [var.subnetA, var.subnetB, var.subnetC]
     security_group_ids = [aws_security_group.sg.id]
   }
 
