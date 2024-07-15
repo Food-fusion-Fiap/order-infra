@@ -1,10 +1,10 @@
 resource "aws_docdb_cluster" "mongodb" {
   cluster_identifier     = "mongodb-cluster"
   engine                 = "docdb"
-  master_username        = "master"
-  master_password        = "yourpassword"
+  master_username        = "root"
+  master_password        = "root"
   db_subnet_group_name   = aws_docdb_subnet_group.subng-mongodb.name
-  vpc_security_group_ids = [aws_security_group.secg-eks.id]
+  vpc_security_group_ids = [aws_security_group.mongodb_public_sg.id]
   skip_final_snapshot    = true
 }
 
